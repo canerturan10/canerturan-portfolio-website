@@ -2,20 +2,20 @@ export default function Skills() {
   const skillCategories = [
     {
       title: "Yazılım & Web Geliştirme",
-      skills: ["Java", "Android Studio (View Binding)", "Next.js", "Tailwind CSS", "Git / Linux"],
+      skills: ["Java", "Java ile Mobil","Python", "Next.js", "Tailwind CSS", "Git / Linux"],
     },
     {
       title: "Veri & Yapay Zeka",
-      skills: ["Machine Learning", "Random Forest", "LLM Engineering", "Agentic AI"],
+      skills: ["Machine Learning",  "LLM Engineering", "Agentic AI"],
     },
     {
       title: "Bilgisayar Bilimleri & Donanım",
-      skills: ["Data Structures", "Hash Tables (Linear Probing)", "Algoritmalar", "ESP32", "Prototipleme"],
+      skills: ["Data Structures", "Algoritmalar", "ESP32", "Prototipleme"],
     },
   ];
 
   return (
-    <section className="w-full py-24 bg-zinc-950 text-white flex justify-center border-t border-zinc-800">
+    <section className="w-full py-24 bg-black text-white flex justify-center">
       <div className="max-w-5xl w-full px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Teknik Yetkinlikler</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

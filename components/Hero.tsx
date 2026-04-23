@@ -9,10 +9,12 @@ function Scene() {
 
 export default function DemoDefault() {
   return (
-    /* h-auto yaptık ki içindeki Player ne kadar yer kaplıyorsa o kadar olsun, ekstra boşluk bırakmasın */
-    <div className="w-full h-auto md:h-screen overflow-hidden bg-black flex items-center justify-center">
-      <div className="w-full h-[300px] sm:h-[400px] md:h-full"> 
-        {/* Mobilde yüksekliği 300px ile sınırladık, bilgisayarda tam ekran yaptık */}
+    <div className="w-full h-[50vh] md:h-screen overflow-hidden bg-black flex items-center justify-center">
+      {/* Mobilde scale-[1.7] ile %170 yakınlaştırdık (zoom in). 
+        Tabletlerde (sm) %125, bilgisayarda (md) ise normal (%100) boyutunda çalışacak.
+        origin-center ile tam merkezden büyümesini sağladık.
+      */}
+      <div className="w-full h-full flex items-center justify-center transform scale-[1.7] sm:scale-125 md:scale-100 origin-center"> 
         <Player
           component={Scene}
           durationInFrames={240}
@@ -22,7 +24,7 @@ export default function DemoDefault() {
           style={{ 
             width: "100%", 
             height: "100%",
-            objectFit: "contain" // Resmin bozulmadan kutuya sığmasını sağlar
+            objectFit: "contain" 
           }}
           controls={false}
           autoPlay

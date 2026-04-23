@@ -18,9 +18,10 @@ export default function Projects() {
   ];
 
   return (
-    <section className="w-full py-24 bg-black text-white flex justify-center">
+    <section className="w-full py-24 bg-zinc-950 text-white flex justify-center border-t border-zinc-800 ">
       <div className="max-w-5xl w-full px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Öne Çıkan Projelerim</h2>
+        
+        <h2 className="text-4xl font-bold mb-12 text-orange-500 text-center">Öne Çıkan Projelerim</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <div key={index} className="group bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:-translate-y-2 hover:border-white transition-all duration-300">
