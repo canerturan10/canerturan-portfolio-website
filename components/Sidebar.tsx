@@ -2,7 +2,24 @@
 import Link from "next/link";
 import { FaHome, FaUser, FaFolderOpen, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-export default function Sidebar() {
+export default function Sidebar({ lang = 'tr' }: { lang?: 'tr' | 'en' }) {
+
+  // Dili kontrol edip kelimeleri anında değiştiriyoruz
+  const t = {
+    tr: { home: "Ana Sayfa", about: "Hakkımda", projects: "Projeler", contact: "İletişim" },
+    en: { home: "Home", about: "About Me", projects: "Projects", contact: "Contact" }
+  }[lang];
+
+  // Aşağıdaki name kısımlarını t.home, t.about şeklinde güncelledik
+  const menuItems = [
+    { name: t.home, href: "#home", icon: <FaHome size={20} />, color: "bg-black", isExternal: false },
+    { name: t.about, href: "#hakkimda", icon: <FaUser size={20} />, color: "bg-blue-600", isExternal: false },
+    { name: t.projects, href: "#projeler", icon: <FaFolderOpen size={20} />, color: "bg-orange-500", isExternal: false },
+    { name: "GitHub", href: "https://github.com/canerturan", icon: <FaGithub size={20} />, color: "bg-zinc-900", isExternal: true },
+    { name: "LinkedIn", href: "https://linkedin.com/in/canerturan", icon: <FaLinkedin size={20} />, color: "bg-[#0077b5]", isExternal: true },
+    { name: t.contact, href: "#iletisim", icon: <FaEnvelope size={20} />, color: "bg-purple-400", isExternal: false },
+  ];
+
   const triggerAnimation = () => {
     const mainContent = document.getElementById("main-content");
     if (mainContent) {
@@ -12,14 +29,7 @@ export default function Sidebar() {
     }
   };
 
-  const menuItems = [
-    { name: "Ana Sayfa", href: "#home", icon: <FaHome size={20} />, color: "bg-black", isExternal: false },
-    { name: "Hakkımda", href: "#hakkimda", icon: <FaUser size={20} />, color: "bg-blue-600", isExternal: false },
-    { name: "Projeler", href: "#projeler", icon: <FaFolderOpen size={20} />, color: "bg-orange-500", isExternal: false },
-    { name: "GitHub", href: "https://github.com/canerturan10", icon: <FaGithub size={20} />, color: "bg-zinc-900", isExternal: true },
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/caner-turan-b7a787274/", icon: <FaLinkedin size={20} />, color: "bg-[#0077b5]", isExternal: true },
-    { name: "İletişim", href: "#iletisim", icon: <FaEnvelope size={20} />, color: "bg-purple-400", isExternal: false },
-  ];
+ 
 
   return (
     // Mobilde w-20, bilgisayarda w-28 genişlik. h-full ile boydan boya. 
