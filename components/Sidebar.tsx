@@ -15,8 +15,8 @@ export default function Sidebar({ lang = 'tr' }: { lang?: 'tr' | 'en' }) {
     { name: t.home, href: "#home", icon: <FaHome size={20} />, color: "bg-black", isExternal: false },
     { name: t.about, href: "#hakkimda", icon: <FaUser size={20} />, color: "bg-blue-600", isExternal: false },
     { name: t.projects, href: "#projeler", icon: <FaFolderOpen size={20} />, color: "bg-orange-500", isExternal: false },
-    { name: "GitHub", href: "https://github.com/canerturan", icon: <FaGithub size={20} />, color: "bg-zinc-900", isExternal: true },
-    { name: "LinkedIn", href: "https://linkedin.com/in/canerturan", icon: <FaLinkedin size={20} />, color: "bg-[#0077b5]", isExternal: true },
+    { name: "GitHub", href: "https://github.com/canerturan10", icon: <FaGithub size={20} />, color: "bg-zinc-900", isExternal: true },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/caner-turan-b7a787274/", icon: <FaLinkedin size={20} />, color: "bg-[#0077b5]", isExternal: true },
     { name: t.contact, href: "#iletisim", icon: <FaEnvelope size={20} />, color: "bg-purple-400", isExternal: false },
   ];
 
