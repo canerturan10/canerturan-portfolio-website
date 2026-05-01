@@ -18,7 +18,8 @@ export const translations = {
     placeholderName: "Adınızı ve soyadınızı yazın",
     placeholderEmail: "E-posta adresinizi yazın",
     placeholderSubject: "Kısa bir konu başlığı yazın",
-    placeholderMessage: "Detayları buraya yazabilirsiniz..."
+    placeholderMessage: "Detayları buraya yazabilirsiniz...",
+    
   },
   en: {
     
